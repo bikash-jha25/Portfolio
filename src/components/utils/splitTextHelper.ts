@@ -37,6 +37,9 @@ export class SplitText {
         const wordSpan = document.createElement("span");
         wordSpan.className = "split-word";
         wordSpan.style.display = "inline-block";
+        if (wIdx < wordsArr.length - 1) {
+          wordSpan.style.marginRight = "0.28em";
+        }
 
         if (type.includes("chars")) {
           Array.from(wordText).forEach((char) => {
@@ -53,13 +56,6 @@ export class SplitText {
 
         el.appendChild(wordSpan);
         this.words.push(wordSpan);
-
-        if (wIdx < wordsArr.length - 1) {
-          const space = document.createElement("span");
-          space.style.display = "inline-block";
-          space.textContent = " ";
-          el.appendChild(space);
-        }
       });
     });
   }

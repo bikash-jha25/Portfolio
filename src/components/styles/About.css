@@ -1,34 +1,37 @@
 .about-section {
   display: flex;
   align-items: center;
-  justify-content: left;
-  place-items: center;
+  justify-content: center;
   position: relative;
   z-index: 10;
   opacity: 1;
   height: auto;
+  min-height: 80vh;
   width: var(--cWidth);
   margin: auto;
 }
 .about-me {
-  padding: 50px 0px;
-  padding-bottom: 0;
-  width: 500px;
-  max-width: calc(100% - 15px);
+  padding: 60px 0px;
+  width: 850px;
+  max-width: calc(100% - 30px);
+  text-align: center;
+  margin: auto;
 }
 .about-me h3 {
-  font-size: 25px;
+  font-size: 22px;
   text-transform: uppercase;
-  letter-spacing: 7px;
+  letter-spacing: 6px;
   font-weight: 400;
   color: var(--accentColor);
+  margin-bottom: 25px;
 }
 
 .about-me p {
-  font-size: 33px;
-  font-weight: 600;
-  line-height: 36px;
-  letter-spacing: 1px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: 0.5px;
+  color: #eae5ec;
 }
 
 @media only screen and (min-width: 600px) {
@@ -38,35 +41,34 @@
 }
 @media only screen and (min-width: 768px) {
   .about-me {
-    width: 500px;
+    width: 750px;
     max-width: calc(100% - 70px);
-    transform: translateY(0%);
   }
-  .about-section {
-    opacity: 1;
+  .about-me p {
+    font-size: 32px;
+    line-height: 50px;
   }
 }
 @media only screen and (min-width: 1025px) {
   .about-section {
     width: var(--cWidth);
-    justify-content: right;
+    justify-content: center;
     max-width: 1920px;
     height: var(--vh);
     padding: 0px;
-    opacity: 1;
   }
   .about-me {
+    width: 850px;
     padding: 0px;
-    width: 50%;
   }
   .about-me p {
-    font-size: 1.9vw;
-    line-height: 2.3vw;
+    font-size: 2.2vw;
+    line-height: 3.2vw;
   }
 }
 @media only screen and (min-width: 1950px) {
   .about-me p {
     font-size: 2.5rem;
-    line-height: 2.7rem;
+    line-height: 3.6rem;
   }
 }
