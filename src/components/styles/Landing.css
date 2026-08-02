@@ -1,0 +1,245 @@
+.landing-section {
+  width: 100%;
+  max-width: var(--cMaxWidth);
+  margin: auto;
+  position: relative;
+  height: var(--vh);
+}
+.landing-container {
+  width: var(--cWidth);
+  margin: auto;
+  height: 100%;
+  position: relative;
+  max-width: var(--cMaxWidth);
+}
+.landing-circle1 {
+  top: 0%;
+  left: 0%;
+  z-index: 15;
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background-color: #fb8dff;
+  box-shadow: inset -50px 40px 50px rgba(84, 0, 255, 0.6);
+  filter: blur(60px);
+  border-radius: 50%;
+  animation: loadingCircle 5s linear infinite;
+  will-change: transform;
+  contain: layout style;
+}
+.nav-fade {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 130px;
+  background-image: linear-gradient(
+    0deg,
+    transparent,
+    var(--backgroundColor) 70%
+  );
+  pointer-events: none;
+  z-index: 12;
+  opacity: 0;
+  left: 0;
+}
+@keyframes loadingCircle {
+  0% {
+    transform: translate(-95%, -75%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-95%, -75%) rotateZ(360deg);
+  }
+}
+
+.landing-circle2 {
+  top: 50%;
+  right: 0%;
+  z-index: 9;
+  position: fixed;
+  display: none;
+  width: 300px;
+  height: 300px;
+  background-color: #fb8dff;
+  box-shadow: inset -50px 40px 50px rgba(84, 0, 255, 0.6);
+  filter: blur(50px);
+  border-radius: 50%;
+  animation: loadingCircle2 5s linear infinite;
+  will-change: transform;
+  contain: layout style;
+}
+@keyframes loadingCircle2 {
+  100% {
+    transform: translate(calc(100% - 2px), -50%) rotate(360deg);
+  }
+}
+
+/* ── Landing text layout ── */
+.landing-intro {
+  position: absolute;
+  z-index: 9;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+}
+.landing-intro h2 {
+  margin: 0;
+  color: var(--accentColor);
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+.landing-intro h1 {
+  margin: 0;
+  letter-spacing: 2px;
+  font-size: 28px;
+  line-height: 28px;
+  font-weight: 500;
+  font-family: "Geist", sans-serif;
+}
+
+.landing-info {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: right;
+  z-index: 9;
+}
+.landing-info h3 {
+  font-size: 22px;
+  letter-spacing: 2px;
+  font-weight: 300;
+  color: var(--accentColor);
+  margin: 0;
+}
+.landing-info h2 {
+  margin: 0;
+  margin-top: -20px;
+  margin-left: 20px;
+  font-family: "Geist", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.landing-h2-info-1 {
+  position: absolute;
+  top: 0;
+}
+h2.landing-info-h2 {
+  color: #c481ff;
+  font-size: 42px;
+  width: 120%;
+  margin: 0;
+  font-family: "Geist", sans-serif;
+  font-weight: 600;
+  position: relative;
+  margin-left: -5px;
+}
+.landing-h2-2 {
+  position: absolute;
+  top: 0;
+}
+.landing-info-h2::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  z-index: 3;
+  background-image: linear-gradient(
+    0deg,
+    var(--backgroundColor) 40%,
+    rgba(0, 0, 0, 0) 110%
+  );
+  top: 0;
+  left: 0;
+}
+
+/* ── Responsive ── */
+@media screen and (min-width: 500px) {
+  .landing-circle2 {
+    display: block;
+  }
+  .landing-info h3 {
+    font-size: 18px;
+  }
+  .landing-intro h2 {
+    font-size: 18px;
+  }
+  .landing-intro h1 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .landing-info h2 {
+    font-size: 35px;
+    line-height: 40px;
+  }
+  h2.landing-info-h2 {
+    font-size: 38px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .landing-intro h2 {
+    font-size: 25px;
+  }
+  .landing-intro h1 {
+    font-size: 40px;
+    line-height: 35px;
+  }
+  .landing-info h3 {
+    font-size: 25px;
+  }
+  .landing-info h2 {
+    font-size: 45px;
+    line-height: 42px;
+  }
+  h2.landing-info-h2 {
+    font-size: 55px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .landing-intro {
+    top: 50%;
+    left: auto;
+    right: 55%;
+    transform: translateY(-50%);
+  }
+  .landing-info {
+    top: 51%;
+    right: auto;
+    left: 55%;
+    text-align: left;
+    transform: translateY(-50%);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .landing-intro {
+    right: 58%;
+  }
+  .landing-info {
+    left: 58%;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .landing-intro h2 {
+    font-size: 35px;
+  }
+  .landing-intro h1 {
+    font-size: 60px;
+    line-height: 55px;
+  }
+  .landing-info h3 {
+    font-size: 35px;
+  }
+  .landing-info h2 {
+    font-size: 65px;
+    line-height: 62px;
+  }
+  h2.landing-info-h2 {
+    font-size: 75px;
+  }
+}
