@@ -2,43 +2,76 @@ import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HoverLinks from "./HoverLinks";
 import { gsap } from "gsap";
-import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
+import Lenis from "lenis";
 import "./styles/Navbar.css";
 
-gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
-export let smoother: ScrollSmoother;
+gsap.registerPlugin(ScrollTrigger);
+
+let lenisInstance: Lenis | null = null;
+
+export const smoother = {
+  paused: (isPaused: boolean) => {
+    if (lenisInstance) {
+      if (isPaused) lenisInstance.stop();
+      else lenisInstance.start();
+    }
+  },
+  scrollTop: (value?: number) => {
+    if (lenisInstance) {
+      if (typeof value === "number") {
+        lenisInstance.scrollTo(value, { immediate: true });
+      }
+      return lenisInstance.scroll;
+    }
+    return 0;
+  },
+  scrollTo: (target: any, _smooth?: boolean, _position?: string) => {
+    if (lenisInstance) {
+      lenisInstance.scrollTo(target, { duration: 1.2 });
+    }
+  },
+};
 
 const Navbar = () => {
   useEffect(() => {
-    smoother = ScrollSmoother.create({
-      wrapper: "#smooth-wrapper",
-      content: "#smooth-content",
-      smooth: 1.2,
-      speed: 1.3,
-      effects: true,
-      autoResize: true,
-      ignoreMobileResize: true,
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
     });
+    lenisInstance = lenis;
 
-    smoother.scrollTop(0);
-    smoother.paused(true);
+    lenis.on("scroll", ScrollTrigger.update);
 
-    let links = document.querySelectorAll(".header ul a");
+    const updateFn = (time: number) => {
+      lenis.raf(time * 1000);
+    };
+    gsap.ticker.add(updateFn);
+    gsap.ticker.lagSmoothing(0);
+
+    lenis.stop(); // Start paused like original initialFX
+
+    const links = document.querySelectorAll(".header ul a");
     links.forEach((elem) => {
-      let element = elem as HTMLAnchorElement;
+      const element = elem as HTMLAnchorElement;
       element.addEventListener("click", (e) => {
         if (window.innerWidth > 1024) {
           e.preventDefault();
-          let elem = e.currentTarget as HTMLAnchorElement;
-          let section = elem.getAttribute("data-href");
-          smoother.scrollTo(section, true, "top top");
+          const targetHref = element.getAttribute("data-href");
+          if (targetHref) {
+            lenis.scrollTo(targetHref, { duration: 1.2 });
+          }
         }
       });
     });
-    window.addEventListener("resize", () => {
-      ScrollSmoother.refresh(true);
-    });
+
+    return () => {
+      gsap.ticker.remove(updateFn);
+      lenis.destroy();
+      lenisInstance = null;
+    };
   }, []);
+
   return (
     <>
       <div className="header">

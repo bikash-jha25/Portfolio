@@ -9,17 +9,17 @@ Personal developer portfolio website built with **React**, **TypeScript**, **GSA
 ## 🛠️ Features & Highlights
 
 - **Modern & Responsive UI:** Sleek dark design with custom typography and subtle background gradients.
-- **Smooth Animations:** Integrated GSAP and ScrollSmoother for fluid section transitions.
 - **Projects Showcase:** Highlights key projects including Mumzworld AI Comparator, DevTube, and NetflixGPT.
 - **Interactive Tech Stack:** Visual tech stack representations built with React & Three.js physics elements.
 - **Fast Performance:** Optimized render loops and lazy-loaded components.
+- **Smooth Animations:** Integrated Lenis smooth scrolling and GSAP for fluid section transitions.
 
 ---
 
 ## ⚙️ Tech Stack
 
 - **Frontend:** React, TypeScript, HTML5, CSS3, Tailwind CSS
-- **Animations:** GSAP, ScrollSmoother, ScrollTrigger
+- **Animations:** GSAP, Lenis Smooth Scroll, ScrollTrigger
 - **Graphics & 3D:** Three.js, React Three Fiber
 - **Build & Tools:** Vite, npm, Git, Vercel
 

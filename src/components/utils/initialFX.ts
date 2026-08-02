@@ -1,4 +1,4 @@
-import { SplitText } from "gsap-trial/SplitText";
+import { SplitText } from "./splitTextHelper";
 import gsap from "gsap";
 import { smoother } from "../Navbar";
 import { setAllTimeline } from "./GsapScroll";
@@ -13,9 +13,8 @@ export function initialFX() {
     delay: 1,
   });
 
-  // Initialise section scroll timelines (previously done by character loader)
+  // Initialise section scroll timelines
   setAllTimeline();
-
 
   var landingText = new SplitText(
     [".landing-info h3", ".landing-intro h2", ".landing-intro h1"],
