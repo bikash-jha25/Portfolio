@@ -208,3 +208,56 @@
     height: auto;
   }
 }
+
+/* ── Mobile: convert horizontal scroll to vertical stacked cards ── */
+@media only screen and (max-width: 768px) {
+  .work-section {
+    height: auto !important;
+    min-height: unset;
+  }
+  .work-section h2 {
+    font-size: 38px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+  }
+  .work-container {
+    height: auto;
+    align-content: normal;
+    padding-bottom: 60px;
+  }
+  .work-flex {
+    flex-direction: column;
+    margin-left: 0;
+    padding-right: 0;
+    height: auto;
+    overflow: visible;
+    transform: none !important; /* override GSAP translateX */
+  }
+  .work-box {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #363636;
+    padding: 30px 20px;
+    gap: 24px;
+    flex-direction: column !important; /* override nth-child column-reverse */
+  }
+  .work-title h3 {
+    font-size: 28px;
+    line-height: 28px;
+  }
+  .work-info h4 {
+    font-size: 14px;
+  }
+  .work-info p {
+    font-size: 12px;
+  }
+  .work-image img {
+    max-height: 180px;
+  }
+  .work-link {
+    opacity: 1; /* always show link button on touch devices */
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}

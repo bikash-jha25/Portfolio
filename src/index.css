@@ -128,3 +128,16 @@ body {
     font-size: 40px;
   }
 }
+
+/* ── Smartphone ── */
+@media screen and (max-width: 480px) {
+  .techstack {
+    height: 70svh;
+    margin-top: 20px;
+  }
+  .techstack h2 {
+    font-size: 24px;
+    top: 80px;
+    letter-spacing: 2px;
+  }
+}

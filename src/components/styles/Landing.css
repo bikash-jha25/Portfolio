@@ -232,3 +232,28 @@
     line-height: 85px;
   }
 }
+
+/* ── Smartphone ── */
+@media screen and (max-width: 480px) {
+  .landing-intro h2 {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+  }
+  .landing-intro h1 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+  .landing-info h3 {
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+  .landing-role-title {
+    height: 36px;
+    width: 220px;
+  }
+  .role-word {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 1px;
+  }
+}

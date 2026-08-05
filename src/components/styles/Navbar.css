@@ -94,3 +94,23 @@
     font-size: 18px;
   }
 }
+
+/* ── Smartphone ── */
+@media only screen and (max-width: 480px) {
+  .header {
+    padding: 14px 0px;
+  }
+  .header ul {
+    flex-direction: row;
+    align-items: center;
+    column-gap: 18px;
+    font-size: 11px;
+  }
+  .navbar-title {
+    font-size: 13px;
+  }
+  .navbar-logo {
+    height: 28px;
+    width: 28px;
+  }
+}

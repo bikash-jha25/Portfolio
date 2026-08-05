@@ -72,3 +72,20 @@
     line-height: 3.6rem;
   }
 }
+
+/* ── Smartphone ── */
+@media only screen and (max-width: 480px) {
+  .about-me {
+    padding: 40px 0px;
+    max-width: calc(100% - 20px);
+  }
+  .about-me h3 {
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+  }
+  .about-me p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}

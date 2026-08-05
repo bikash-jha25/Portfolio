@@ -391,3 +391,42 @@
     line-height: 6.8rem;
   }
 }
+
+/* ── Smartphone ── */
+@media only screen and (max-width: 480px) {
+  .whatIDO {
+    padding: 30px 0 40px;
+    overflow-x: hidden;
+  }
+  .what-box h2 {
+    font-size: 40px;
+    line-height: 38px;
+    margin: 30px 0 20px;
+  }
+  .what-box {
+    max-width: calc(100% - 20px);
+    margin: 0;
+  }
+  .what-box-in {
+    margin-left: 0;
+    height: 380px;
+  }
+  .what-content {
+    padding: 20px;
+  }
+  .what-content h3 {
+    font-size: 20px;
+  }
+  .what-noTouch:hover,
+  .what-content-active {
+    padding: 8px 20px;
+  }
+  .what-noTouch:hover ~ .what-content,
+  .what-box-in:hover .what-noTouch:not(:hover),
+  .what-content.what-sibling {
+    padding: 4px 20px;
+  }
+  .what-border1 svg {
+    width: 100%;
+  }
+}

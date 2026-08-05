@@ -41,6 +41,9 @@ const projects = [
 
 const Work = () => {
   useGSAP(() => {
+    // Horizontal scroll only on desktop (>768px); mobile uses normal vertical flow
+    if (window.innerWidth <= 768) return;
+
     let timeline: gsap.core.Timeline;
     let translateX: number = 0;
 

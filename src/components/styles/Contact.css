@@ -90,3 +90,34 @@ a.contact-social {
     width: calc(100% - 25px);
   }
 }
+
+/* ── Smartphone ── */
+@media only screen and (max-width: 480px) {
+  .contact-section {
+    margin-top: 30px;
+    padding-bottom: 40px;
+  }
+  .contact-section h3 {
+    font-size: 28px;
+  }
+  .contact-flex {
+    gap: 28px;
+  }
+  .contact-flex h4 {
+    margin-top: 10px;
+    font-size: 13px;
+  }
+  .contact-flex p,
+  .contact-flex a {
+    font-size: 14px;
+  }
+  a.contact-social {
+    font-size: 18px;
+  }
+  .contact-box h2 {
+    font-size: 15px;
+  }
+  .contact-container {
+    width: calc(100% - 20px);
+  }
+}

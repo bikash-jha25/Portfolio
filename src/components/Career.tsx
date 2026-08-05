@@ -49,16 +49,16 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Full Stack Developer</h4>
-                <h5>College Management Platform</h5>
+                <h4>Full Stack Development Intern</h4>
+                <h5>Softwebex</h5>
               </div>
               <h3>NOW</h3>
             </div>
             <p>
-              Jan 2024 – Aug 2024 · Built responsive React.js interfaces,
-              RESTful APIs with Node.js &amp; Express.js, MongoDB CRUD with
-              JWT-based authentication. Followed clean coding practices using
-              Git/GitHub.
+              Feb 2026 – Jul 2026 · Developed and maintained responsive web
+              applications, assisted in frontend and backend development with API
+              integration &amp; database operations. Collaborated with the team to
+              build, test, and enhance real-world full-stack applications.
             </p>
           </div>
         </div>

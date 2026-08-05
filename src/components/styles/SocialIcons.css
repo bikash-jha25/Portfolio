@@ -101,3 +101,21 @@ div.resume-button span {
     margin-top: -1.5px;
   }
 }
+
+/* ── Smartphone ── */
+@media only screen and (max-width: 767px) {
+  .resume-button {
+    /* Un-rotate: show as a normal horizontal label at bottom-right */
+    transform: none;
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: 2px;
+    bottom: 14px;
+    right: 10px;
+    gap: 4px;
+  }
+  div.resume-button span {
+    font-size: 15px;
+    margin-top: 0;
+  }
+}
