@@ -2,6 +2,16 @@
 
 Personal developer portfolio website built with **React**, **TypeScript**, **GSAP**, and **Vite**.
 
+<div align="center">
+
+### 🌐 [Live Demo → portfolio-omega-steel-86.vercel.app](https://portfolio-omega-steel-86.vercel.app/)
+
+[![Live Demo](https://img.shields.io/badge/🚀%20View%20Live%20Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://portfolio-omega-steel-86.vercel.app/)
+
+</div>
+
+---
+
 ![Portfolio Preview](./public/images/portfolio-preview.png)
 
 ---
