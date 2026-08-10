@@ -34,7 +34,7 @@ const projects = [
     tools: "React.js, Firebase, TMDB API, JWT",
     desc: "AI-powered movie recommendation app with JWT auth, Gemini AI integration, and Firebase Hosting.",
     image: "/images/project_netflixgpt.png",
-    live: "https://netflix-gpt-phi-coral.vercel.app",
+    live: "https://netflix-gpt-phi-mocha.vercel.app/",
     github: "https://github.com/bikash-jha25/NetflixGPT",
   },
 ];
